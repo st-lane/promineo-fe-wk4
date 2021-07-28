@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE Tech: Week 4 - ToDo App</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./custom.css" type="text/css">
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="i-want-a-server.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <div class="container">
+
+            <div id="p-div"></div>
+            <input id="p-input" type="text" placeholder="New Paragraph">
+            <button id="p-button">Create</button>
+        </div>
+    </main>
+    <script>
+        function doIt(){
+            let pDiv = document.getElementById('p-div');
+            let pInput = document.getElementById('p-input');
+            let p = document.createElement("P");
+            p.innerHTML = pInput.value;
+            pDiv.append(p);
+            pInput.value = "";
+        }
+        document.getElementById('p-button').addEventListener('click', () => { doIt() } );
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE Tech: Week 4 - ToDo App</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./custom.css" type="text/css">
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="i-want-a-server.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        <div class="container">
+            <h1>The assignment</h1>
+            <p>Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+            <ol>
+                <li>A Bootstrap styled table representing your choice of data.</li>
+                <li>A Bootstrap styled form that allows a user to add a new row to the table when submitted.</li>
+            </ol>
+            </p>
+
+            <div class="card">
+                <div class="card-body">
+                    <form name="dataForm">
+                        <div class="row mt-2">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label for="startDateNew">Start Date</label>
+                                    <input type="date" class="form-control" id="startDateNew" name="startDateNew">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label for="endDateNew">Start Date</label>
+                                    <input type="date" class="form-control" id="endDateNew" name="endDateNew">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label for="taskNew">Task</label>
+                                    <input type="text" class="form-control" name="taskNew" id="taskNew"
+                                        placeholder="Task">
+                                </div>
+                            </div>
+                        </div>
+                        <divv class="row mt-2">
+                            <div class="col-sm">
+                                <button id="btnAdd" type="button" class="btn btn-primary form-control">Create</button>
+                            </div>
+                </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="containe row mt-2">
+            <table id="taskList" class="table table-dark table-striped">
+                <tr>
+                    <th>Task</th>
+                    <th>Date Created</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                </tr>
+            </table>
+        </div>
+        </div>
+    </main>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="toDo.js"></script>
+
+</body>
+
+</html>
